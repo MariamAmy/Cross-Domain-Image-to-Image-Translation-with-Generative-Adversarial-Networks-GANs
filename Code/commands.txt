@@ -1,0 +1,11 @@
+#Train
+python main.py --config configs/CelebAMaskHQ-f16.yaml --train --sample_at_start --save_top --gpu_ids 0  --resume_model CelebAMaskHQ-f16.pth
+
+#Sampling on Test Dataset
+python main.py --config configs/CelebAMaskHQ-f16.yaml --sample_to_eval --gpu_ids 0 --resume_model CelebAMaskHQ-f16.pth
+
+#Testing on Single Image
+python main.py --config configs/CelebAMaskHQ-f16.yaml --test --gpu_ids 0 --resume_model CelebAMaskHQ-f16.pth -i "path/to/input/image" -o "output/path"
+
+#Loading UI
+python main.py --config configs/CelebAMaskHQ-f16.yaml --ui --gpu_ids 0 --resume_model CelebAMaskHQ-f16.pth
